@@ -33,31 +33,58 @@ $type = Request()->type;
                     </ul>
                 </li>
                 @endcan
-
-
-                @canany(['regions.view', 'areas.view','branches.view'])              
-                <li class="menu-title">Network</li>
+                <!-- Education -->
+                @can('education.view')
+                <li class="menu-title">Education</li>
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="fas fa-network-wired"></i>
-                        <span>Network</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{url('regions')}}">Region</a></li>
-                        <li><a href="{{url('areas')}}">Area</a></li>
-                        <li><a href="{{url('branches')}}">Branches</a></li>
-                    </ul>
-                </li>
-                @endcan
-                @can('feedback-questions')
-                <li class="menu-title">Feedback Questions</li>
-                <li>
-                    <a href="{{url('feedback-questions')}}" class="waves-effect">
-                        <i class="fas fa-question-circle"></i>
-                        <span>Feedback Questions</span>
+                    <a href="{{url('education')}}" class="waves-effect">
+                        <i class='fas fa-graduation-cap'></i>
+                        <span>Education</span>
                     </a>
                 </li>
                 @endcan
+                <!-- Experience -->
+                 @can('experience.view')
+                <li class="menu-title">Experience</li>
+                <li>
+                    <a href="{{url('experience')}}" class="waves-effect">
+                       <i class="fas fa-history"></i>
+                        <span>Experience</span>
+                    </a>
+                </li>
+                @endcan
+                <!-- Services -->
+                 @can('services.view')
+                <li class="menu-title">Services</li>
+                <li>
+                    <a href="{{url('services')}}" class="waves-effect">
+                       <i class="fa fa-wrench" aria-hidden="true"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                @endcan
+
+                <!-- PortFolio -->
+                @can('portfolio.view')
+                <li class="menu-title">Portfolio </li>
+                <li>
+                    <a href="{{url('portfolio')}}" class="waves-effect">
+                       <i class="fas fa-briefcase"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                @endcan
+                <!-- Portfolio Categories -->
+                @can('portfolio-categories.view')
+                <li class="menu-title">Portfolio Categories</li>
+                <li>
+                    <a href="{{url('portfolio-categories')}}" class="waves-effect">
+                       <i class="fa fa-list-alt" aria-hidden="true"></i>
+                        <span>Portfolio Categories</span>
+                    </a>
+                </li>
+                @endcan
+
                 @can('settings')
                 <li class="menu-title">Penal Settings</li>
                 <li>

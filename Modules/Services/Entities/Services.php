@@ -9,7 +9,8 @@ class Services extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = ['service_title','icone','description'];
+    protected $table='services';
     
     protected static function newFactory()
     {

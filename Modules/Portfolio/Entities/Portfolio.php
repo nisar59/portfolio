@@ -9,7 +9,8 @@ class Portfolio extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = ['category','title','client_name','project_date','project_url','description','image'];
+    protected $table='portfolio';
     
     protected static function newFactory()
     {
