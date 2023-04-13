@@ -1,0 +1,11 @@
+{
+    "Users": true,
+    "Roles": true,
+    "Settings": true,
+    "Logs": true,
+    "Trash": true,
+    "Portfolio": true,
+    "Skills": true,
+    "Category": true,
+    "Services": true
+}
